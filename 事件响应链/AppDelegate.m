@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "VCRoot.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    //创建window对象
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.rootViewController = [[VCRoot alloc] init];
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
